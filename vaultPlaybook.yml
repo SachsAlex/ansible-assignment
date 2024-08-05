@@ -1,0 +1,9 @@
+---
+- name: Use Ansible Vault
+  hosts: TestInstances
+  vars_files:
+    - geheimnis.txt
+  tasks:
+    - name: Show Password
+      debug:
+        var: superSecret
